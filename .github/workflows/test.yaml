@@ -8,6 +8,6 @@ jobs:
          uses: cedx/setup-ant@v3
          with:
            optional-tasks: true
-           version: 1.7.1
+           version: =1.7.1
        - name: Ant Version
          run: ant -v
