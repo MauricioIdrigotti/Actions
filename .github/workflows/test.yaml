@@ -3,11 +3,10 @@ on: workflow_dispatch
 jobs:
     Test:
      runs-on: ubuntu-latest
+     container:
+        image: idrigotti/java-ant
      steps: 
-       - name: Set up Ant
-         uses: cedx/setup-ant@v3
-         with:
-           optional-tasks: true
-           version: =1.7.1
+       - name: Java Version
+         run: java -version
        - name: Ant Version
          run: ant -v
