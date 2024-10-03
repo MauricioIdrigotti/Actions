@@ -3,10 +3,8 @@ on: workflow_dispatch
 jobs:
     Test:
      runs-on: ubuntu-latest
-     container:
-        image: idrigotti/java-ant
+#     container:
+#        image: idrigotti/java-ant
      steps: 
-       - name: Java Version
-         run: java -version
-       - name: Ant Version
-         run: ant -v
+       - name: Java e Ant Version
+         uses: ./.github/actions/ant-docker
