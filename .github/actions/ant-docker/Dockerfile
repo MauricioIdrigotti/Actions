@@ -1,11 +1,9 @@
 FROM ubuntu:latest
 
-WORKDIR /opt
-
-COPY . .
+COPY . /opt
 
 #-Java
-RUN tar -xzf jdk-6u45-linux-x64.bin.tar.gz -C /opt && \
+RUN cd /opt/ && tar -xzf jdk-6u45-linux-x64.bin.tar.gz -C /opt && \
     ./jdk-6u45-linux-x64.bin && \
     rm jdk-6u45-linux-x64.bin.tar.gz && rm jdk-6u45-linux-x64.bin
 
@@ -22,5 +20,7 @@ ENV BUILD_SOURCESDIRECTORY /siga-saude
 ENV ANT_HOME /opt/ant
 ENV JAVA_HOME /opt/jdk1.6.0_45
 ENV PATH $PATH:$JAVA_HOME/bin:$ANT_HOME/bin
+
+WORKDIR /opt
 
 CMD ["ant","build"]
