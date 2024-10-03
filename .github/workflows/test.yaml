@@ -9,6 +9,6 @@ jobs:
        - name: Get Action
          uses: actions/checkout@v3
        - name: List Directories
-         run: ls -R /home/
+         run: pwd
        - name: Java e Ant Version
          uses: ./.github/actions/ant-docker
