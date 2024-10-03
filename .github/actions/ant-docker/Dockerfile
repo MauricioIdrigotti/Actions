@@ -23,7 +23,7 @@ ENV ANT_HOME /opt/ant
 ENV JAVA_HOME /opt/jdk1.6.0_45
 ENV PATH $PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
-COPY ../../../src .
+COPY ../../../src /src
 # COPY ../../../pom.xml .
 
 CMD ["ant","build"]
