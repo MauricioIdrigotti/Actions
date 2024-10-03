@@ -3,7 +3,7 @@ FROM ubuntu:latest
 COPY . /opt
 
 #-Java
-RUN cd /opt/ && tar -xzf jdk-6u45-linux-x64.bin.tar.gz -C /opt && \
+RUN cd /opt && tar -xzf jdk-6u45-linux-x64.bin.tar.gz -C /opt && \
     ./jdk-6u45-linux-x64.bin && \
     rm jdk-6u45-linux-x64.bin.tar.gz && rm jdk-6u45-linux-x64.bin
 
