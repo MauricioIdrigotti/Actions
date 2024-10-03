@@ -23,4 +23,4 @@ ENV ANT_HOME /opt/ant
 ENV JAVA_HOME /opt/jdk1.6.0_45
 ENV PATH $PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
-CMD ["sh", "-c", "java -version && ant -v"]
+CMD ["ant","build"]
