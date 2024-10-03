@@ -23,4 +23,6 @@ ENV PATH $PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
 WORKDIR /opt
 
+RUN ls 
+
 CMD ["ant","build"]
