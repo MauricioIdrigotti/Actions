@@ -26,4 +26,4 @@ WORKDIR /opt
 RUN ls 
 RUN pwd
 
-CMD ["cat","build.xml"]
+CMD ["pwd"]
