@@ -26,4 +26,4 @@ WORKDIR /opt
 RUN ls 
 RUN pwd
 
-CMD ["pwd"]
+CMD ["sh", "-c", "cd /opt && ant build"]
