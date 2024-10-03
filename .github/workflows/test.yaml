@@ -6,5 +6,7 @@ jobs:
 #     container:
 #        image: idrigotti/java-ant
      steps: 
+       - name: Get Action
+         uses: actions/checkout@v3
        - name: Java e Ant Version
          uses: ./.github/actions/ant-docker
