@@ -1,0 +1,1 @@
+FROM idrigotti/apache-jboss:latest

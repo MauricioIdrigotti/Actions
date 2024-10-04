@@ -6,7 +6,7 @@ jobs:
      container:
         image: idrigotti/java-ant
      steps: 
-       - name: Get Action
+       - name: Get Repository
          uses: actions/checkout@v3
        - name: Java e Ant Version
          run: ant build
@@ -15,3 +15,21 @@ jobs:
          with:
           name: build-files
           path: /__w/Actions/Actions/build/jar/ant-sample.jar
+    Package:
+      runs-on: ubuntu-latest
+      container:
+         image: docker:latest
+      steps:
+        - name: Get Repository
+          uses: actions/checkout@v3
+        - name: Download artifacts
+          uses: actions/download-artifact@v4
+          with: 
+           name: build-files
+        - name: List
+          run: | 
+            pwd 
+            ls
+        - name: Build image
+          run: docker build --no-cache -t apache . 
+      
