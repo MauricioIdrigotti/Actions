@@ -1,12 +1,17 @@
 name: Ant teste
 on: workflow_dispatch
 jobs:
-    Test:
+    Build:
      runs-on: ubuntu-latest
-#     container:
-#        image: idrigotti/java-ant
+     container:
+        image: idrigotti/java-ant
      steps: 
        - name: Get Action
          uses: actions/checkout@v3
        - name: Java e Ant Version
-         uses: ./.github/actions/ant-docker
+         uses: ant build
+       - name: Upload artifacts
+         uses: actions/upload-artifact@v3
+         with:
+          name: build-files
+          path: /jar/ant-sample.jar
