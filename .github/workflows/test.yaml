@@ -18,7 +18,9 @@ jobs:
          uses: actions/upload-artifact@v4
          with:
           name: build-files
-          path: /__w/Actions/Actions/build/jar/ant-sample.jar
+          path: |
+            /__w/Actions/Actions/build/jar/ant-sample.jar
+            index.html
     Package:
       needs: Build
       runs-on: ubuntu-latest
@@ -31,10 +33,6 @@ jobs:
           uses: actions/download-artifact@v4
           with: 
            name: build-files
-        - name: List
-          run: | 
-            pwd 
-            ls
         - name: Build image
           run: docker build --no-cache -t apache:latest . 
         - name: Save image
