@@ -25,7 +25,7 @@ jobs:
       needs: Build
       runs-on: ubuntu-latest
       container:
-         image: docker:latest
+         image: idrigotti/docker
       steps:
         - name: Get Repository
           uses: actions/checkout@v4
