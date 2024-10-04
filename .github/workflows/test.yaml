@@ -1,4 +1,4 @@
-name: Ant teste
+name: Ant test
 on: workflow_dispatch
 jobs:
     Build:
