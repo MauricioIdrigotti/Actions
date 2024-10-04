@@ -36,5 +36,12 @@ jobs:
             pwd 
             ls
         - name: Build image
-          run: docker build --no-cache -t apache . 
+          run: docker build --no-cache -t apache:latest . 
+        - name: Save image
+          run: docker save -o apache.tar apache:latest
+        - name: Upload artifacts
+          uses: actions/upload-artifact@v4
+          with:
+           name: docker-image
+           path: /__w/Actions/Actions/apache.tar
       
