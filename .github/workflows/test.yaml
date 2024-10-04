@@ -20,7 +20,6 @@ jobs:
           name: build-files
           path: |
             /__w/Actions/Actions/build/jar/ant-sample.jar
-            index.html
     Package:
       needs: Build
       runs-on: ubuntu-latest
