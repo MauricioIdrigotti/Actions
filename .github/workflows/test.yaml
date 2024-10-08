@@ -35,13 +35,6 @@ jobs:
            name: build-files
         - name: Build image
           run: docker build --no-cache -t ${{ secrets.DOCKERHUB_USERNAME }}/apache:latest . 
-        # - name: Save image
-        #   run: docker save -o apache.tar ${{ secrets.DOCKERHUB_USERNAME }}/apache:latest
-        # - name: Upload artifacts
-        #   uses: actions/upload-artifact@v4
-        #   with:
-        #    name: docker-image
-        #    path: /__w/Actions/Actions/apache.tar
         - name: Login Docker
           run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
         - name: Push Docker
