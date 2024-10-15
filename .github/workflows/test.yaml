@@ -23,7 +23,7 @@ jobs:
             index.html
     Package:
       needs: Build
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       container:
          image: idrigotti/docker
       steps:
@@ -41,7 +41,7 @@ jobs:
           run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/apache:latest
     Deploy:
       needs: Package
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       container:
          image: idrigotti/openshift
       steps:
