@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
     Build:
-     runs-on: copa-runner-set
+     runs-on: msereno-1S82NM0003BR
      container:
         image: idrigotti/apache
         credentials:
