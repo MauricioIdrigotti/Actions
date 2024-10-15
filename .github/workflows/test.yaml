@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
     Build:
-     runs-on: msereno-1S82NM0003BR
+     runs-on: self-hosted
      container:
         image: idrigotti/java-ant
      steps: 
