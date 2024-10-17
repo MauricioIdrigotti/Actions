@@ -24,6 +24,6 @@ jobs:
          with:
            name: artifacts
            path: |
-             /home/runner/work/Actions/Actions/src/piona/HelloWorld.java
+             '/src/piona/HelloWorld.java'
              Dockerfile
              index.html
