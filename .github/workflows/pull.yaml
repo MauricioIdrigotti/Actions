@@ -13,7 +13,7 @@ jobs:
            # username: ${{ secrets.DOCKERHUB_USERNAME }}
            # password: ${{ secrets.DOCKERHUB_TOKEN }}
      steps: 
-       - name: Checkout
+       - name: Get Repository
          uses: actions/checkout@v4
        - name: Upload Artifacts
          uses: actions/upload-artifacts@v4
