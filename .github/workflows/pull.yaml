@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
 jobs:
     Build:
-     runs-on: self-hosted
-     container:
-        image: idrigotti/apache
-        credentials:
-           username: ${{ secrets.DOCKERHUB_USERNAME }}
-           password: ${{ secrets.DOCKERHUB_TOKEN }}
+     runs-on: copa-runner
+     # container:
+        # image: idrigotti/apache
+        # credentials:
+           # username: ${{ secrets.DOCKERHUB_USERNAME }}
+           # password: ${{ secrets.DOCKERHUB_TOKEN }}
      steps: 
-       - name: Test Pull
-         run: java -version
+       - name: Test Mvn
+         run: mvn -v
