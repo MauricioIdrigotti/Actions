@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 jobs:
     Build:
-     runs-on: ubuntu
+     runs-on: ubuntu-latest
      # container:
         # image: idrigotti/apache
         # credentials:
