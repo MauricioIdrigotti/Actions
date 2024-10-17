@@ -6,12 +6,20 @@ on:
   workflow_dispatch:
 jobs:
     Build:
-     runs-on: copa-runner
+     runs-on: ubuntu
      # container:
         # image: idrigotti/apache
         # credentials:
            # username: ${{ secrets.DOCKERHUB_USERNAME }}
            # password: ${{ secrets.DOCKERHUB_TOKEN }}
      steps: 
-       - name: Test Mvn
-         run: mvn -v
+       - name: Checkout
+         uses: actions/checkout@v4
+       - name: Upload Artifacts
+         uses: actions/upload-artifacts@v4
+         with:
+           name: artifacts
+           path: |
+             build.xml
+             Dockerfile
+             index.html
