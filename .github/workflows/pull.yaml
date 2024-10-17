@@ -20,6 +20,6 @@ jobs:
          with:
            name: artifacts
            path: |
-             src/HelloWorld.java
+             ./src/HelloWorld.java
              Dockerfile
              index.html
